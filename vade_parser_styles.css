@@ -20,9 +20,9 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 700px; /* Adjust max width */
+    max-width: 800px; /* Adjust max width */
     width: 100%;
-    max-height: 80vh; /* Adjust height to fit on screen */
+    max-height: 100vh; /* Adjust height to fit on screen */
     overflow: auto; /* Enable scrolling if content overflows */
     box-sizing: border-box;
 }
@@ -30,8 +30,8 @@ body {
 /* Textarea styling */
 textarea {
     width: 100%;
-    padding: 8px; /* Adjust padding */
-    font-size: 14px; /* Adjust font size */
+    padding: 10px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
     resize: none;
@@ -41,27 +41,27 @@ textarea {
 
 /* Specific textarea styles for input and output */
 #logInput {
-    height: 120px; /* Adjust height */
+    height: 150px; /* Adjust height */
     background: #34495e;
     color: #ecf0f1;
 }
 
 #parsedOutput {
-    height: 180px; /* Adjust height */
+    height: 280px; /* Adjust height */
     background: #2c3e50;
     color: #ecf0f1;
 }
 
 /* Button styling */
 button {
-    padding: 8px 14px; /* Adjust padding */
+    padding: 8px 16px; /* Adjust padding */
     font-size: 14px; /* Adjust font size */
     cursor: pointer;
     border: none;
     border-radius: 5px;
     color: #ecf0f1;
     background-color: #2980b9;
-    margin-right: 10px; /* Adjust margin */
+    margin-right: 8px; /* Adjust margin */
     margin-top: 10px; /* Add margin on top for spacing */
     transition: background-color 0.3s;
 }
@@ -83,7 +83,7 @@ button:hover {
     padding: 8px;
     font-size: 14px;
     margin-bottom: 10px;
-    width: calc(100% - 120px); /* Adjust width to fit the search button */
+    width: calc(100% - 130px); /* Adjust width to fit the search button */
     border: none;
     border-radius: 5px;
     background: #34495e;
@@ -92,7 +92,7 @@ button:hover {
 
 /* Search button styling */
 #searchButton {
-    padding: 8px 14px;
+    padding: 8px 16px;
     font-size: 14px;
     cursor: pointer;
     border: none;
