@@ -4,105 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log Parser Tool</title>
-    <style>
-        /* General body styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #1e2a38; /* Dark background for modern look */
-            color: #e0e0e0;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Align items to the start */
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        /* Container for all content */
-        .container {
-            width: 100%;
-            max-width: 1200px; /* Maximum width for larger screens */
-        }
-
-        /* Header section */
-        .header {
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: #ffffff;
-        }
-
-        p.description {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-        }
-
-        /* Grid layout for parser cards */
-        .card-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Space between cards */
-        }
-
-        .parser-card {
-            background: #2b3a48; /* Dark card background */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            max-width: 300px; /* Adjusted card width */
-            width: 100%;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: left; /* Left-align text within the card */
-        }
-
-        .parser-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-        }
-
-        .parser-card h2 {
-            font-size: 1.5rem;
-            margin: 0 0 10px;
-            color: #e0e0e0;
-        }
-
-        .parser-card p {
-            font-size: 1rem;
-            margin: 0;
-            color: #b0b0b0;
-        }
-    </style>
+    <title>Log Parsing Tools</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Full-screen canvas for stars effect -->
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- Main container with glassy effect -->
     <div class="container">
         <!-- Header section -->
         <div class="header">
-            <h1>Log Parser Tool</h1>
+            <h1>Log Parsing Tools</h1>
         </div>
 
         <!-- Grid layout for parser cards -->
         <div class="card-grid">
             <div class="parser-card" onclick="window.location.href='vade_parser.html'">
                 <h2>Vade Secure</h2>
-                <p>Parse logs from Vade Secure</p>
             </div>
 
-            <!-- Future parsers can be added here -->
-            <!-- Example:
-            <div class="parser-card" onclick="window.location.href='another_parser.html'">
-                <h2>Another Parser</h2>
-                <p>Description of another parser.</p>
+            <!-- TEST Button (Placeholder for future parser) -->
+            <div class="parser-card" onclick="window.location.href='index.html'">
+                <h2>TEST</h2>
             </div>
-            -->
         </div>
     </div>
+
+    <!-- Link to external JavaScript file for stars effect -->
+    <script src="stars.js"></script>
 
 </body>
 </html>

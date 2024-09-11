@@ -1,0 +1,121 @@
+/* vade_parser_styles.css */
+
+/* Basic Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ecf0f1;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto; /* Allow scrolling */
+}
+
+/* Container for Vade Parser */
+.container {
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 900px; /* Adjust max width */
+    width: 100%;
+    max-height: 90vh; /* Adjust height to fit on screen */
+    overflow: auto; /* Enable scrolling if content overflows */
+    box-sizing: border-box;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Specific textarea styles for input and output */
+#logInput {
+    height: 200px; /* Adjust height */
+    background: #34495e;
+    color: #ecf0f1;
+}
+
+#parsedOutput {
+    height: 300px; /* Adjust height */
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #ecf0f1;
+    background-color: #2980b9;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+#copyButton {
+    background-color: #27ae60;
+}
+
+#copyButton:hover {
+    background-color: #2ecc71;
+}
+
+/* Search input styling */
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: calc(100% - 140px); /* Adjust width to fit the search button */
+    border: none;
+    border-radius: 5px;
+    background: #34495e;
+    color: #ecf0f1;
+}
+
+/* Search button styling */
+#searchButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #2980b9;
+    color: #ecf0f1;
+}
+
+#searchButton:hover {
+    background-color: #3498db;
+}
+
+/* No match text styling */
+#noMatch {
+    color: #e74c3c;
+    display: none;
+}
+
+/* Heading styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}

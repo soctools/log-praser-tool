@@ -1,0 +1,101 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0d1b2a, #1b263b); /* Background color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Canvas for stars to be full-screen */
+#starsCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place behind the content */
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 600px; 
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(10px); /* Blur behind the container */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); /* shadow  */
+    color: #ffffff;
+    z-index: 1; /* Placing it above the canvas */
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    text-align: center; /* Center align of the text and cards */
+}
+
+/* Header section */
+.header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem; 
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+p.description {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+}
+
+/* Grid layout for parser cards */
+.card-grid {
+    display: flex;
+    flex-direction: column; /* Stack the cards vertically */
+    gap: 10px; /* Space between cards */
+    align-items: center; /* Center cards horizontally */
+}
+
+/* Individual parser card with a more compact design */
+.parser-card {
+    background: rgba(43, 58, 72, 0.85); /* Slightly darker card background */
+    border-radius: 10px;
+    padding: 15px 25px; /* Padding for smaller buttons */
+    width: 100%; /* Full width of container */
+    max-width: 400px; /* Maximum width for the cards */
+    cursor: pointer;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center; /* Center align the text */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+}
+
+/* Card's hover effect */
+.parser-card:hover {
+    transform: translateY(-5px); /* Lifting effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+    background: rgba(255, 0, 0, 0.1); /* Light hover effect */
+}
+
+/* Font size adjustments for text */
+.parser-card h2 {
+    font-size: 2.3rem; /* Smaller font size */
+    margin-bottom: 8px;
+    color: #ffffff; 
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.parser-card p {
+    font-size: 1rem; /* Slightly larger text */
+    margin: 0;
+    color: #b0b0b0;
+}
