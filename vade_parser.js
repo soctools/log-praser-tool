@@ -1,5 +1,7 @@
 // JavaScript for Vade Secure Log Parser functionality
 
+let searchIndex = -1; // Global index for tracking the current search result
+
 function extractData() {
     const logData = document.getElementById('logInput').value;
     if (!logData) {
@@ -113,8 +115,7 @@ function copyToClipboard() {
 }
 
 function searchLog() {
-    // Get the search input and log input
-    const searchText = document.getElementById('searchInput').value;
+    const searchText = document.getElementById('searchInput').value.trim();
     const logTextarea = document.getElementById('logInput');
     const logText = logTextarea.value;
 
@@ -122,13 +123,30 @@ function searchLog() {
     document.getElementById('noMatch').style.display = 'none';
     logTextarea.focus();
 
-    // Find the position of the search text in the log
-    const searchPosition = logText.indexOf(searchText);
-    if (searchPosition === -1) {
-        // No match found
-        document.getElementById('noMatch').style.display = 'block';
-    } else {
-        // Highlight the search text in the log input area
-        logTextarea.setSelectionRange(searchPosition, searchPosition + searchText.length);
+    if (searchText === '') {
+        document.getElementById('noMatch').style.display = 'none';
+        return;
     }
+
+    // Find all occurrences of the search term
+    const matches = [];
+    let match;
+    const regex = new RegExp(searchText, 'gi');
+    while ((match = regex.exec(logText)) !== null) {
+        matches.push(match.index);
+    }
+
+    if (matches.length === 0) {
+        document.getElementById('noMatch').style.display = 'block';
+        searchIndex = -1; // Reset index
+        return;
+    }
+
+    // Move to the next match
+    searchIndex = (searchIndex + 1) % matches.length;
+    const position = matches[searchIndex];
+    
+    // Highlight the search text in the log input area
+    logTextarea.setSelectionRange(position, position + searchText.length);
+    logTextarea.focus(); // Ensure textarea is focused
 }
