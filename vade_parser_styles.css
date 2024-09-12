@@ -14,15 +14,14 @@ body {
     overflow: hidden; /* Prevent scrolling on the body */
 }
 
-/* Container for Vade Parser */
 .container {
-    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    background: rgba(0, 0, 0, 0.7); 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 800px; /* Set maximum width */
-    width: 90%; /* Adjust width */
-    max-height: calc(100vh - 40px); /* Ensure container fits within the viewport height */
+    max-width: 800px; 
+    width: 90%; 
+    max-height: calc(100vh - 40px); 
     overflow-y: auto; /* Enable vertical scrolling if content overflows */
     box-sizing: border-box;
     display: flex;
@@ -44,27 +43,27 @@ textarea {
 
 /* Specific textarea styles for input and output */
 #logInput {
-    height: 150px; /* Adjust height */
+    height: 150px; 
     background: #34495e;
     color: #ecf0f1;
 }
 
 #parsedOutput {
-    height: 200px; /* Adjust height */
+    height: 200px; 
     background: #2c3e50;
     color: #ecf0f1;
 }
 
 /* Button styling */
 button {
-    padding: 8px 16px; /* Smaller padding */
-    font-size: 14px; /* Smaller font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
     cursor: pointer;
     border: none;
     border-radius: 5px;
     color: #ecf0f1;
     background-color: #2980b9;
-    margin: 5px; /* Consistent margin */
+    margin: 5px; 
     transition: background-color 0.3s;
     display: inline-block; /* Prevent stretching */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
@@ -90,27 +89,25 @@ button:hover {
     background-color: #2ecc71;
 }
 
-/* Specific styling for search and action buttons */
+
 #searchButton, #extractButton, #copyButton {
-    width: auto; /* Allow buttons to size naturally */
+    width: auto; 
 }
 
-/* Search input styling */
 #searchInput {
     padding: 8px;
     font-size: 14px;
     margin-bottom: 10px;
-    width: calc(100% - 120px); /* Adjust width to fit with smaller buttons */
+    width: calc(100% - 120px); 
     border: none;
     border-radius: 5px;
     background: #34495e;
     color: #ecf0f1;
 }
 
-/* Search button styling */
 #searchButton {
-    padding: 8px 16px; /* Smaller padding */
-    font-size: 14px; /* Smaller font size */
+    padding: 8px 16px; 
+    font-size: 14px; 
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -131,14 +128,13 @@ button:hover {
 /* Heading styling */
 h1 {
     text-align: center;
-    margin-bottom: 20px; /* Adjust margin */
+    margin-bottom: 20px; 
 }
 
 h2 {
-    margin-top: 10px; /* Adjust margin */
+    margin-top: 10px; 
 }
 
-/* Highlight class for search results */
 .highlight {
     background-color: #ffeb3b; /* Yellow highlight */
     color: #000; /* Black text for contrast */

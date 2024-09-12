@@ -1,5 +1,3 @@
-// JavaScript for Vade Secure Log Parser functionality
-
 let searchIndex = -1; // Global index for tracking the current search result
 
 function extractData() {
@@ -9,7 +7,7 @@ function extractData() {
         return;
     }
 
-    // Initialize regex patterns for extracting information
+    // Regex patterns for extracting information
     const patterns = {
         "From": /"vade\.from":\s*\[\s*"([^"]+)"\s*\]/,
         "Sent to": /"vade\.to":\s*\[\s*"([^"]+)"\s*\]/,
@@ -21,7 +19,7 @@ function extractData() {
         "Attachment Hashes md5": /"vade\.attachments\.hashes\.md5":\s*\[\s*([^\]]+)\]/
     };
 
-    // Initialize an object to hold the extracted data
+    // Object to hold the extracted data
     let extractedData = {
         "From": null,
         "Sent to": null,
@@ -57,7 +55,7 @@ function extractData() {
         }
     }
 
-    // Format output with spacing between lines
+    // Spacing between lines
     let output = [];
 
     output.push(`From : ${extractedData['From'] || 'None'}`);
@@ -96,7 +94,7 @@ function extractData() {
     }
 
     // Display the parsed data in the output box
-    document.getElementById('parsedOutput').value = output.join('\n\n'); // Add extra newline to separate sections
+    document.getElementById('parsedOutput').value = output.join('\n\n'); // Add newline to separate sections
 }
 
 function copyToClipboard() {
@@ -105,12 +103,12 @@ function copyToClipboard() {
 
     // Select the text in the parsed output textarea
     parsedOutput.select();
-    parsedOutput.setSelectionRange(0, 99999); // For mobile devices
+    parsedOutput.setSelectionRange(0, 99999); 
 
-    // Copy the selected text to the clipboard
+    // Copy text
     document.execCommand("copy");
 
-    // Alert the user that the text has been copied
+    // Alert that the text has been copied
     alert("Copied to clipboard!");
 }
 
@@ -128,7 +126,7 @@ function searchLog() {
         return;
     }
 
-    // Find all occurrences of the search term
+    // Find all occurrences of the search 
     const matches = [];
     let match;
     const regex = new RegExp(searchText, 'gi');
@@ -148,5 +146,5 @@ function searchLog() {
     
     // Highlight the search text in the log input area
     logTextarea.setSelectionRange(position, position + searchText.length);
-    logTextarea.focus(); // Ensure textarea is focused
+    logTextarea.focus(); 
 }

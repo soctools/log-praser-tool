@@ -1,5 +1,3 @@
-// JavaScript for falling star animation
-
 const canvas = document.getElementById("starsCanvas");
 const ctx = canvas.getContext("2d");
 
