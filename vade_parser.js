@@ -111,7 +111,7 @@ function copyToClipboard() {
     document.execCommand("copy");
 
     // Alert the user that the text has been copied
-    alert("Parsed data copied to clipboard!");
+    alert("Copied to clipboard!");
 }
 
 function searchLog() {
