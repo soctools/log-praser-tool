@@ -16,7 +16,10 @@ function extractData() {
         "URLs": /"url":\s*"([^"]+)"/g,
         "Vade Status": /"vade\.status":\s*\[\s*"([^"]+)"\s*\]/,
         "Attachments": /"vade\.attachments\.filename":\s*\[\s*([^\]]+)\]/,
-        "Attachment Hashes md5": /"vade\.attachments\.hashes\.md5":\s*\[\s*([^\]]+)\]/
+        "Attachment Hashes md5": /"vade\.attachments\.hashes\.md5":\s*\[\s*([^\]]+)\]/,
+        "Vade Action": /"vade\.action":\s*\[\s*"([^"]+)"\s*\]/,          
+        "Whitelisted": /"vade\.whitelisted":\s*\[\s*(.*?)\s*\]/
+ 
     };
 
     // Object to hold the extracted data
@@ -28,7 +31,9 @@ function extractData() {
         "URLs": [],
         "Vade Status": null,
         "Attachments": [],
-        "Attachment Hashes md5": []
+        "Attachment Hashes md5": [],
+        "Vade Action": null,       
+        "Whitelisted": null        
     };
 
     // Extract data based on regex patterns
@@ -77,7 +82,14 @@ function extractData() {
     
     output.push(`Vade Status : ${extractedData['Vade Status'] || 'None'}`);
 
-    // Attachments
+    
+    output.push(`Vade Action : ${extractedData['Vade Action'] || 'None'}`); 
+
+    
+    output.push(`Whitelisted : ${extractedData['Whitelisted'] || 'None'}`);
+
+
+    
     if (extractedData['Attachments'].length > 0) {
         output.push("Attachments:");
         output.push(extractedData['Attachments'].map(filename => `- ${filename}`).join('\n'));
@@ -85,7 +97,7 @@ function extractData() {
         output.push("Attachments: None");
     }
 
-    // Attachment Hashes md5
+    
     if (extractedData['Attachment Hashes md5'].length > 0) {
         output.push("Attachments Hashes md5:");
         output.push(extractedData['Attachment Hashes md5'].map(hash => `- ${hash}`).join('\n'));
