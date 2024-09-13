@@ -5,7 +5,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to bottom, #5a5555, #020b5ce0); /* Background color */
+    background: linear-gradient(to bottom, #2e8ad6, #1626b3e7, rgba(41, 0, 41, 0.906));
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -82,7 +82,7 @@ p.description {
 .parser-card:hover {
     transform: translateY(-5px); /* Lifting effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-    background: rgba(87, 0, 248, 0.171); /* Light hover effect */
+    background: rgba(82, 177, 255, 0.397); /* Light hover effect */
 }
 
 /* Font size adjustments for text */
