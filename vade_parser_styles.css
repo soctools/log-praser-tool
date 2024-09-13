@@ -6,7 +6,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #ecf0f1;
-    background: linear-gradient(to bottom, #a1a6af, #003d7a);
+    background: linear-gradient(to bottom, #5a5555, #020b5ce0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@ body {
 
 .container {
     background: rgba(0, 0, 0, 0.7); 
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 800px; 
@@ -134,6 +134,7 @@ h1 {
 h2 {
     margin-top: 10px; 
 }
+
 
 .highlight {
     background-color: #ffeb3b; /* Yellow highlight */

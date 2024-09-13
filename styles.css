@@ -5,7 +5,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #0d1b2a, #1b263b); /* Background color */
+    background: linear-gradient(to bottom, #5a5555, #020b5ce0); /* Background color */
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -82,12 +82,12 @@ p.description {
 .parser-card:hover {
     transform: translateY(-5px); /* Lifting effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
-    background: rgba(255, 0, 0, 0.1); /* Light hover effect */
+    background: rgba(87, 0, 248, 0.171); /* Light hover effect */
 }
 
 /* Font size adjustments for text */
 .parser-card h2 {
-    font-size: 2.3rem; /* Smaller font size */
+    font-size: 2.3rem; 
     margin-bottom: 8px;
     color: #ffffff; 
     font-weight: bold;
@@ -95,7 +95,7 @@ p.description {
 }
 
 .parser-card p {
-    font-size: 1rem; /* Slightly larger text */
+    font-size: 1rem; 
     margin: 0;
     color: #b0b0b0;
 }

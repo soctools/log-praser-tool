@@ -10,14 +10,14 @@ window.addEventListener('resize', () => {
 });
 
 const starsArray = [];
-const numberOfStars = 150;
+const numberOfStars = 200;
 
 class Star {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.radius = Math.random() * 1.5 + 1;
-        this.dy = Math.random() * 0.5 + 0.5; // Falling speed
+        this.dy = Math.random() * 2.5 + 2.5; // Falling speed
         this.dx = Math.random() * 0.5 - 0.25; // Horizontal movement
         this.opacity = Math.random() * 0.5 + 0.5;
     }
