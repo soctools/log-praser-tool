@@ -151,3 +151,16 @@ function searchLog() {
     logTextarea.setSelectionRange(position, position + searchText.length);
     logTextarea.focus(); // Ensure the text area remains focused
 }
+
+function copyToClipboard() {
+    const outputTextarea = document.getElementById('parsedOutput'); // Get the textarea element
+    outputTextarea.select(); // Select the text inside the textarea
+    outputTextarea.setSelectionRange(0, 99999); // For mobile devices
+    
+    try {
+        document.execCommand('copy'); // Copy the selected text to clipboard
+        alert('Copied to clipboard!'); // Show confirmation
+    } catch (err) {
+        alert('Failed to copy!'); // Handle errors
+    }
+}

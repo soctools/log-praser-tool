@@ -15,9 +15,9 @@ body {
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.6); 
     border-radius: 20px;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     max-width: 800px; 
     width: 90%; 
@@ -38,7 +38,7 @@ textarea {
     border-radius: 5px;
     resize: none;
     box-sizing: border-box;
-    margin-bottom: 15px; /* Adjust margin */
+    margin-bottom: 25px; /* Adjust margin */
 }
 
 /* Specific textarea styles for input and output */
@@ -140,4 +140,21 @@ h2 {
     background-color: #ffeb3b; /* Yellow highlight */
     color: #000; /* Black text for contrast */
     border-radius: 3px;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    font-size: 30px; /* Adjust the size as per your preference */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow with X, Y, blur, and color */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+    font-size: 28px; /* Adjust the size as per your preference */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow with X, Y, blur, and color */
 }

@@ -4,44 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vade Secure Log Parser</title>
-    <link rel="stylesheet" href="styles.css"> <!-- General styles -->
+    <title>WAF Parser</title>
+    <!-- Link to Vade parser styles and general styles -->
     <link rel="stylesheet" href="vade_parser_styles.css"> <!-- Vade parser specific styles -->
+    <link rel="stylesheet" href="styles.css"> <!-- General styles -->
 </head>
 <body>
+    <!-- Full-screen canvas for stars effect -->
     <canvas id="starsCanvas"></canvas>
-    <div class="container">
-        <h1>Vade Secure Log Parser</h1>
 
-        <input type="text" id="searchInput" placeholder="Search...">
+    <!-- Main container -->
+    <div class="container">
+        <!-- Header section -->
+        <h1>WAF Parser</h1>
+
+        <!-- Search Input and Button -->
+        <div class="button-group">
+            <input type="text" id="searchInput" placeholder="Search...">
+            
+        </div>
         <button id="searchButton" onclick="searchLog()">Search</button>
+        <!-- No match message -->
         <p id="noMatch">Nothing found</p>
 
+        <!-- Log Input Section -->
         <h2>Log Input</h2>
         <textarea id="logInput" placeholder="Paste your log data here..."></textarea>
 
-        <button onclick="extractData()">Extract Data</button>
+        <!-- Extract Data Button -->
+        <button id="extractButton" onclick="extractData()">Extract Data</button>
 
+        <!-- Output Section -->
         <h2>Output</h2>
         <textarea id="parsedOutput" readonly placeholder="Parsed data will appear here..."></textarea>
-
         <button id="copyButton" onclick="copyToClipboard()">Copy to Clipboard</button>
     </div>
-    <script src="stars.js"></script>
-    <script src="vade_parser.js"></script>
-    
 
+    <!-- Back buttons container -->
     <div class="back-button">
         <!-- Back to Home Button -->
         <div class="parser-card" onclick="window.location.href='index.html'">
             <h2>Home</h2>
         </div>
     
-        <!-- WAF Parser Button -->
-        <div class="parser-card" onclick="window.location.href='waf.html'">
-            <h2>WAF Parser</h2>
+        <!-- Vade Parser Button -->
+        <div class="parser-card" onclick="window.location.href='vade_parser.html'">
+            <h2>Vade Parser</h2>
         </div>
     </div>
-    
+
+    <!-- Link to JavaScript files -->
+    <script src="stars.js"></script>
+    <script src="waf_parser.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>

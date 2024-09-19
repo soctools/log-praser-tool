@@ -22,7 +22,7 @@ body {
 }
 
 /* Main Container */
-.container {
+.containerindex {
     width: 90%;
     max-width: 600px; 
     background: rgba(0, 0, 0, 0.4);
@@ -98,4 +98,64 @@ p.description {
     font-size: 1rem; 
     margin: 0;
     color: #b0b0b0;
+}
+
+/* Back button container */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100; /* Keep it above other elements */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Button Container for positioning buttons vertically */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100; /* Ensure it stays above other content */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+}
+
+/* Container for buttons */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100; /* Ensure it is above other content */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align buttons */
+    gap: 10px; /* Space between buttons */
+}
+
+
+/* Button styling */
+.back-button .parser-card {
+    background: rgba(43, 58, 72, 0.85);
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: 160px; /* Fixed width */
+    text-align: center;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.back-button .parser-card h2 {
+    font-size: 1.4rem; /* Adjust if necessary */
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.2; /* Ensure consistent line height */
+}
+
+button {
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
